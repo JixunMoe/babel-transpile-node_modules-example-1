@@ -1,0 +1,13 @@
+diff --git a/node_modules/@babel/core/lib/config/files/package.js b/node_modules/@babel/core/lib/config/files/package.js
+index c0f8988..6dc1208 100644
+--- a/node_modules/@babel/core/lib/config/files/package.js
++++ b/node_modules/@babel/core/lib/config/files/package.js
+@@ -28,7 +28,7 @@ function findPackageData(filepath) {
+ 
+   let dirname = _path().default.dirname(filepath);
+ 
+-  while (!pkg && _path().default.basename(dirname) !== "node_modules") {
++  while (!pkg) {
+     directories.push(dirname);
+     pkg = readConfigPackage(_path().default.join(dirname, PACKAGE_FILENAME));
+ 
